@@ -1,64 +1,440 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Responsive HTML5 Page Layout Template</title>
-    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Voice acting portfolio, demos, and contact information for Riley Hart.">
+  <title>Riley Hart — Voice Actor</title>
+  <style>
+    :root {
+      --ink: #404040;
+      --muted: #777;
+      --blue: #0876b9;
+      --blue-dark: #075f96;
+      --rule: #ddd;
+      --soft: #f5f5f5;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font: 15px/1.55 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--blue-dark);
+      text-decoration: underline;
+    }
+
+    .topbar {
+      min-height: 42px;
+      color: #eee;
+      background: #222;
+      box-shadow: 0 1px 4px #0003;
+    }
+
+    .nav-inner {
+      width: min(940px, calc(100% - 32px));
+      min-height: 42px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: .2px;
+    }
+
+    .brand:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      color: #ccc;
+      font-size: 13px;
+    }
+
+    nav a:hover { color: #fff; }
+
+    .wrap {
+      width: min(940px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 46px 0 35px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      align-items: center;
+      gap: 42px;
+    }
+
+    .eyebrow {
+      margin: 0 0 7px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: #222;
+      font-size: clamp(34px, 6vw, 49px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+    }
+
+    .intro {
+      max-width: 590px;
+      margin: 0;
+      color: #666;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .portrait {
+      min-height: 205px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background:
+        radial-gradient(ellipse at 50% 35%, #d9d0c4 0 18%, transparent 19%),
+        radial-gradient(ellipse at 50% 92%, #9a8b7e 0 37%, transparent 38%),
+        linear-gradient(145deg, #eee9e2, #d7d0c8);
+      color: #6b6259;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 9px 15px;
+      border: 1px solid #075c91;
+      border-radius: 4px;
+      color: #fff;
+      background: linear-gradient(#1688ca, #0873b2);
+      box-shadow: inset 0 1px #ffffff40, 0 1px 2px #0002;
+      font-size: 14px;
+      font-weight: bold;
+      text-shadow: 0 -1px #0003;
+    }
+
+    .button:hover {
+      color: #fff;
+      background: linear-gradient(#0879b9, #05649e);
+      text-decoration: none;
+    }
+
+    main { padding: 32px 0 48px; }
+
+    .section-heading {
+      margin: 0 0 18px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--rule);
+      color: #333;
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    .section-heading small {
+      margin-left: 7px;
+      color: #999;
+      font-size: 13px;
+      font-weight: normal;
+    }
+
+    .demos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .demo {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 1px 2px #0000000a;
+    }
+
+    .demo h3 {
+      margin: 0 0 2px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .demo p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    audio {
+      width: 100%;
+      height: 34px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 34px;
+      margin-top: 38px;
+    }
+
+    .roles {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .roles li {
+      padding: 11px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .roles strong { color: #333; }
+
+    .roles span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .about-copy { margin: 0 0 12px; }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 17px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      color: #666;
+      background: var(--soft);
+      font-size: 12px;
+    }
+
+    .contact-box {
+      padding: 18px;
+      border: 1px solid #d6e5ee;
+      border-radius: 4px;
+      background: #f3f9fc;
+    }
+
+    .contact-box p { margin: 0 0 10px; }
+
+    .contact-box .button { margin-top: 7px; }
+
+    footer {
+      padding: 20px 0;
+      border-top: 1px solid var(--rule);
+      color: #888;
+      font-size: 12px;
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 650px) {
+      .nav-inner {
+        padding: 10px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .hero-grid,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid { gap: 23px; }
+
+      .portrait {
+        min-height: 180px;
+        max-width: 260px;
+      }
+
+      .demos { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
-
 <body>
-	<header>
-		<div id="logo"><img src="/logo.png">HTML5&nbsp;Layout</div>
-		<nav>  
-			<ul>
-				<li><a href="/">Home</a>
-				<li><a href="https://html-css-js.com/">HTML</a>
-				<li><a href="https://html-css-js.com/css/code/">CSS</a>
-				<li><a href="https://htmlcheatsheet.com/js/">JS</a>
-			</ul>
-		</nav>
-	</header>
-	<section>
-		<strong>Demonstration of a simple page layout using HTML5 tags: header, nav, section, main, article, aside, footer, address.</strong>
-	</section>
-	<section id="pageContent">
-		<main role="main">
-			<article>
-				<h2>Stet facilis ius te</h2>
-				<p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-			</article>
-			<article>
-				<h2>Illud mollis moderatius</h2>
-				<p>Eum facete intellegat ei, ut mazim melius usu. Has elit simul primis ne, regione minimum id cum. Sea deleniti dissentiet ea. Illud mollis moderatius ut per, at qui ubique populo. Eum ad cibo legimus, vim ei quidam fastidii.</p>
-			</article>
-			<article>
-				<h2>Ex ignota epicurei quo</h2>
-				<p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
-			</article>
-			<article>
-				<h2>His at autem inani volutpat</h2>
-				<p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.</p>
-			</article>
-		</main>
-		<aside>
-			<div>Sidebar 1</div>
-			<div>Sidebar 2</div>
-			<div>Sidebar 3</div>
-		</aside>
-	</section>
-	<footer>
-		<p>&copy; You can copy, edit and publish this template but please leave a link to our website | <a href="https://html5-templates.com/" target="_blank" rel="nofollow">HTML5 Templates</a></p>
-		<address>
-			Contact: <a href="mailto:me@example.com">Mail me</a>
-		</address>
-	</footer>
+  <header class="topbar">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Riley Hart <span aria-hidden="true">/</span> Voice Actor</a>
+      <nav aria-label="Main navigation">
+        <a href="#demos">Demos</a>
+        <a href="#credits">Credits</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <div class="wrap" id="top">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Voice actor · Available worldwide</p>
+          <h1 id="intro-title">A voice that brings<br>your story to life.</h1>
+          <p class="intro">
+            Warm, expressive, and versatile voiceover for animation, games,
+            commercials, narration, and characters worth remembering.
+          </p>
+          <a class="button" href="#demos">Listen to my demos &darr;</a>
+        </div>
+        <div class="portrait" role="img" aria-label="Placeholder for a headshot">
+          Replace with your headshot
+        </div>
+      </div>
+    </section>
 
+    <main>
+      <section id="demos" aria-labelledby="demos-title">
+        <h2 class="section-heading" id="demos-title">Listen <small>Selected voice demos</small></h2>
+        <div class="demos">
+          <article class="demo">
+            <h3>Commercial Reel</h3>
+            <p>Bright, friendly, conversational · 0:60</p>
+            <audio controls preload="none">
+              <source src="audio/commercial-reel.mp3" type="audio/mpeg">
+              Your browser does not support the audio player.
+            </audio>
+          </article>
+
+          <article class="demo">
+            <h3>Animation &amp; Character</h3>
+            <p>Playful, quirky, character-driven · 0:55</p>
+            <audio controls preload="none">
+              <source src="audio/animation-reel.mp3" type="audio/mpeg">
+              Your browser does not support the audio player.
+            </audio>
+          </article>
+
+          <article class="demo">
+            <h3>Video Game</h3>
+            <p>Heroic, grounded, dramatic · 1:05</p>
+            <audio controls preload="none">
+              <source src="audio/game-reel.mp3" type="audio/mpeg">
+              Your browser does not support the audio player.
+            </audio>
+          </article>
+
+          <article class="demo">
+            <h3>Narration</h3>
+            <p>Clear, assured, thoughtful · 0:50</p>
+            <audio controls preload="none">
+              <source src="audio/narration-reel.mp3" type="audio/mpeg">
+              Your browser does not support the audio player.
+            </audio>
+          </article>
+        </div>
+      </section>
+
+      <div class="content-grid">
+        <section id="credits" aria-labelledby="credits-title">
+          <h2 class="section-heading" id="credits-title">Recent credits</h2>
+          <ul class="roles">
+            <li>
+              <strong>Juniper — “The Starling Archives”</strong>
+              <span>Lead character · Independent audio drama · 2025</span>
+            </li>
+            <li>
+              <strong>Additional voices — “Skybound Quest”</strong>
+              <span>Video game · North Coast Interactive · 2024</span>
+            </li>
+            <li>
+              <strong>Brand campaign — “Make Room for Wonder”</strong>
+              <span>Commercial · Brightside Creative · 2024</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="about" aria-labelledby="about-title">
+          <h2 class="section-heading" id="about-title">A little about me</h2>
+          <p class="about-copy">
+            I’m Riley, a voice actor who loves making bold characters feel
+            human. From an intimate story read to a big animated adventure,
+            I bring curiosity, care, and a well-stocked tea cupboard to every session.
+          </p>
+          <p class="about-copy">
+            Based in Portland, Oregon. Recording from a treated home studio
+            with remote session capability.
+          </p>
+          <div class="tag-list" aria-label="Voice qualities">
+            <span class="tag">Warm</span>
+            <span class="tag">Witty</span>
+            <span class="tag">Youthful</span>
+            <span class="tag">Character</span>
+            <span class="tag">Narration</span>
+          </div>
+        </section>
+      </div>
+
+      <section id="contact" style="margin-top:38px" aria-labelledby="contact-title">
+        <h2 class="section-heading" id="contact-title">Let’s make something great</h2>
+        <div class="contact-box">
+          <p>Have a project in mind? I’d love to hear about it.</p>
+          <a class="button" href="mailto:hello@rileyhartvoice.com">Email Riley</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2025 Riley Hart Voice</span>
+      <span>Made for stories worth hearing.</span>
+    </div>
+  </footer>
 </body>
-
 </html>
+
