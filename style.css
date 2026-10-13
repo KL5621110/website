@@ -212,8 +212,8 @@ audio {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 0px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
   margin-top: 38px;
 }
 
