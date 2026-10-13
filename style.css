@@ -149,10 +149,6 @@ footer p {
   max-width: 480px;
 }
 
-/* Optional: shift the whole column slightly left on desktop. */
-@media (min-width: 741px) {
-  .container {
-    position: relative;
-    left: 30px;
-  }
+body > .container {
+  transform: translateX(30px) !important;
 }
