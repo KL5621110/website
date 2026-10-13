@@ -134,11 +134,14 @@ footer p {
   .container {
     box-sizing: border-box;
     width: auto;
+    max-width: none;
     margin: 24px 20px 36px;
   }
+}
 
 .page-header,
 main,
+main section,
 footer {
   text-align: center;
 }
@@ -146,10 +149,3 @@ footer {
 .button-rack {
   justify-content: center;
 }
-
-.link-list {
-  list-style: none;
-  padding: 0;
-}
-}
-
