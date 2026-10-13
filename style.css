@@ -1,4 +1,4 @@
-/* A lightweight, Bootstrap 1.2-era inspired style. */
+
 
 html {
   background: #fff;
@@ -136,5 +136,20 @@ footer p {
     width: auto;
     margin: 24px 20px 36px;
   }
+
+.page-header,
+main,
+footer {
+  text-align: center;
 }
+
+.button-rack {
+  justify-content: center;
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
 
