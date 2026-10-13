@@ -1,10 +1,15 @@
-
+* {
+  box-sizing: border-box;
+}
 
 html {
   background: #fff;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   color: #404040;
   background: #fff;
@@ -14,10 +19,9 @@ body {
 }
 
 .container {
-  box-sizing: border-box;
   width: 700px;
   max-width: calc(100% - 40px);
-  margin: 36px auto 48px;
+  margin: 36px 0 48px;
   text-align: left;
 }
 
@@ -77,24 +81,16 @@ section {
 }
 
 .link-list li {
-  margin: 0 0 5px;
-}
-
-.link-list time {
-  color: #888;
-  white-space: nowrap;
+  margin-bottom: 5px;
 }
 
 .button-rack {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: flex-start;
-  padding: 4px 0;
 }
 
 .button-slot {
-  box-sizing: border-box;
   display: inline-flex;
   width: 88px;
   height: 31px;
@@ -113,7 +109,6 @@ section {
   text-decoration: none;
 }
 
-/* Keep real button images at their intended 88×31 size. */
 .button-rack img {
   display: block;
   width: 88px;
@@ -135,18 +130,9 @@ footer p {
 
 @media (max-width: 740px) {
   .container {
-    box-sizing: border-box;
-    width: auto;
-    margin: 24px 20px 36px;
+    width: calc(100% - 40px);
+    max-width: none;
+    margin-top: 24px;
   }
 }
 
-.page-header,
-main,
-main section,
-footer {
-}
-
-.button-rack {
-  justify-content: center;
-}
