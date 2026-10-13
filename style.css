@@ -18,22 +18,24 @@ body {
 }
 
 .container {
+  position: relative;
+  left: 30px;
   width: 700px;
   max-width: calc(100% - 40px);
   margin: 36px auto 48px;
-  text-align: left !important;
+  text-align: left;
 }
 
-/* Keep every section and text element aligned to the column's left edge. */
 .container header,
 .container main,
 .container section,
 .container footer,
 .container h1,
 .container h2,
+.container h3,
 .container p,
 .container li {
-  text-align: left !important;
+  text-align: left;
 }
 
 .page-header {
@@ -121,16 +123,11 @@ section {
   text-decoration: none;
 }
 
-footer {
-  margin-top: 30px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
-  color: #888;
-  font-size: 12px;
-}
-
-footer p {
-  margin: 0;
+.button-rack img {
+  display: block;
+  width: 88px;
+  height: 31px;
+  border: 0;
 }
 
 .voice-demos {
@@ -149,6 +146,24 @@ footer p {
   max-width: 480px;
 }
 
-body > .container {
-  transform: translateX(30px) !important;
+footer {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  color: #888;
+  font-size: 12px;
 }
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 740px) {
+  .container {
+    left: 0;
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: 24px auto 36px;
+  }
+}
+
