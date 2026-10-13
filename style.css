@@ -214,8 +214,7 @@ audio {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-top: 38px;
-}
+  margin-top: 38px
 
 .roles {
   margin: 0;
