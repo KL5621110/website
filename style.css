@@ -9,6 +9,9 @@ body {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   color: #404040;
   background: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,23 +21,9 @@ body {
 }
 
 .container {
-  position: relative;
-  left: 30px;
   width: 700px;
   max-width: calc(100% - 40px);
-  margin: 36px auto 48px;
-  text-align: left;
-}
-
-.container header,
-.container main,
-.container section,
-.container footer,
-.container h1,
-.container h2,
-.container h3,
-.container p,
-.container li {
+  margin: 36px 0 48px;
   text-align: left;
 }
 
@@ -61,6 +50,12 @@ h2 {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 27px;
+}
+
+h3 {
+  margin: 12px 0 6px;
+  color: #555;
+  font-size: 13px;
 }
 
 p {
@@ -97,6 +92,12 @@ section {
   margin-bottom: 5px;
 }
 
+.voice-demos audio {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+}
+
 .button-rack {
   display: flex;
   flex-wrap: wrap;
@@ -130,22 +131,6 @@ section {
   border: 0;
 }
 
-.voice-demos {
-  margin-bottom: 25px;
-}
-
-.voice-demos h3 {
-  margin: 12px 0 6px;
-  color: #555;
-  font-size: 13px;
-}
-
-.voice-demos audio {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-}
-
 footer {
   margin-top: 30px;
   padding-top: 10px;
@@ -160,10 +145,9 @@ footer p {
 
 @media (max-width: 740px) {
   .container {
-    left: 0;
     width: calc(100% - 40px);
     max-width: none;
-    margin: 24px auto 36px;
+    margin-top: 24px;
   }
 }
 
