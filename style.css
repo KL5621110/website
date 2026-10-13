@@ -140,4 +140,12 @@ footer p {
     margin-top: 24px;
   }
 }
+.container {
+  transform: translateX(20px);
+}
 
+@media (max-width: 740px) {
+  .container {
+    transform: none;
+  }
+}
