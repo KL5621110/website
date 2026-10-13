@@ -150,4 +150,7 @@ footer p {
     margin-top: 24px;
   }
 }
-
+.link-list time {
+  color: #888;
+  white-space: nowrap;
+}
