@@ -2,27 +2,38 @@
   box-sizing: border-box;
 }
 
-html {
-  background: #fff;
+html,
+body {
+  margin: 0;
+  min-height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
   color: #404040;
   background: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-align: left;
 }
 
 .container {
   width: 700px;
   max-width: calc(100% - 40px);
-  margin: 36px 0 48px;
-  text-align: left;
+  margin: 36px auto 48px;
+  text-align: left !important;
+}
+
+/* Keep every section and text element aligned to the column's left edge. */
+.container header,
+.container main,
+.container section,
+.container footer,
+.container h1,
+.container h2,
+.container p,
+.container li {
+  text-align: left !important;
 }
 
 .page-header {
@@ -87,6 +98,7 @@ section {
 .button-rack {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 8px;
 }
 
@@ -107,13 +119,6 @@ section {
   border-color: #888;
   color: #555;
   text-decoration: none;
-}
-
-.button-rack img {
-  display: block;
-  width: 88px;
-  height: 31px;
-  border: 0;
 }
 
 footer {
