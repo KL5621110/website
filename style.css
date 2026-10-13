@@ -133,19 +133,26 @@ footer p {
   margin: 0;
 }
 
-@media (max-width: 740px) {
-  .container {
-    width: calc(100% - 40px);
-    max-width: none;
-    margin-top: 24px;
-  }
-}
-.container {
-  transform: translateX(20px);
+.voice-demos {
+  margin-bottom: 25px;
 }
 
-@media (max-width: 740px) {
+.voice-demos h3 {
+  margin: 12px 0 6px;
+  color: #555;
+  font-size: 13px;
+}
+
+.voice-demos audio {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Optional: shift the whole column slightly left on desktop. */
+@media (min-width: 741px) {
   .container {
-    transform: none;
+    position: relative;
+    left: -20px;
   }
 }
