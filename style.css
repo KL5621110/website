@@ -14,7 +14,9 @@ body {
 }
 
 .container {
+  box-sizing: border-box;
   width: 700px;
+  max-width: calc(100% - 40px);
   margin: 36px auto 48px;
   text-align: left;
 }
