@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mara Vale — Voice Actor</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
     <nav class="nav-inner" aria-label="Main navigation">
-      <a class="brand" href="#">Mara Vale <span aria-hidden="true">/</span> Voice</a>
+      <a class="brand" href="#top">Mara Vale <span aria-hidden="true">/</span> Voice</a>
       <ul class="nav-links">
         <li><a href="#demos">Demos</a></li>
         <li><a href="#credits">Credits</a></li>
@@ -19,12 +19,12 @@
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="top">
     <section class="hero">
       <div class="hero-slideshow" aria-hidden="true">
-        <img src="project-1.jpg" alt="">
-        <img src="project-2.jpg" alt="">
-        <img src="project-3.jpg" alt="">
+        <div class="hero-slide slide-one"></div>
+        <div class="hero-slide slide-two"></div>
+        <div class="hero-slide slide-three"></div>
       </div>
 
       <div class="hero-content">
@@ -64,7 +64,7 @@
           <span class="demo-label">Commercial</span>
           <h3>Bright &amp; conversational</h3>
           <p>Friendly, natural reads for products and brands.</p>
-          <audio controls preload="none">
+          <audio controls preload="none" aria-label="Commercial voice demo">
             <source src="commercial-demo.mp3" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
@@ -74,7 +74,7 @@
           <span class="demo-label">Narration</span>
           <h3>Clear &amp; reassuring</h3>
           <p>Steady storytelling for explainers and documentaries.</p>
-          <audio controls preload="none">
+          <audio controls preload="none" aria-label="Narration voice demo">
             <source src="narration-demo.mp3" type="audio/mpeg">
             Your browser does not support audio playback.
           </audio>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="about-content">
-          <article class="panel">
+          <article class="panel about-profile">
             <h3>Professional, relaxed, and ready to record.</h3>
             <p>
               I’m Mara, a voice actor who loves helping people find the right
@@ -157,16 +157,45 @@
       </div>
     </section>
 
-    <footer>
-      © 2026 Mara Vale Voice · Made for good stories and great sound.
+    <footer class="site-footer">
+      <p>© <span id="current-year">2026</span> Mara Vale Voice · Made for good stories and great sound.</p>
 
       <div class="footer-badges">
-        <a class="web-badge" href="#demos">Listen to<br>demos</a>
-        <a class="web-badge" href="#about">About<br>Mara</a>
-        <a class="web-badge" href="mailto:hello@maravalevoice.com">Email<br>Mara</a>
+        <a href="#demos" aria-label="Listen to demos">
+          <img src="listen-badge.gif" width="88" height="31" alt="Listen to demos">
+        </a>
+        <a href="#about" aria-label="About Mara">
+          <img src="about-badge.gif" width="88" height="31" alt="About Mara">
+        </a>
+        <a href="mailto:hello@maravalevoice.com" aria-label="Email Mara">
+          <img src="email-badge.gif" width="88" height="31" alt="Email Mara">
+        </a>
       </div>
     </footer>
   </main>
+
+  <script>
+    (function () {
+      var backgrounds = [
+        "#f5f5f5",
+        "#edf4f8",
+        "#eef5ee",
+        "#edf7f8",
+        "#fbf4e8"
+      ];
+
+      var chosenBackground =
+        backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+      document.documentElement.style.setProperty(
+        "--page-background",
+        chosenBackground
+      );
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    }());
+  </script>
 </body>
 </html>
 
