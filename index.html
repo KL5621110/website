@@ -1,159 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Voice Actor</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mara Vale — Voice Actor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="site-header">
-      <div class="brand">
-        <a class="wordmark" href="#">YOUR NAME<span>!</span></a>
-        <p class="tagline">Voice actor · storyteller · occasional space pirate</p>
+  <header class="topbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#">Mara Vale <span aria-hidden="true">/</span> Voice</a>
+      <ul class="nav-links">
+        <li><a href="#demos">Demos</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-slideshow" aria-hidden="true">
+        <img src="project-1.jpg" alt="">
+        <img src="project-2.jpg" alt="">
+        <img src="project-3.jpg" alt="">
       </div>
 
-      <nav aria-label="Main navigation">
-        <a href="#demos">Demos</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
-      </nav>
-    </header>
+      <div class="hero-content">
+        <p class="eyebrow">Voice actor · Narrator · Character artist</p>
+        <h1>Make your next story sound unforgettable.</h1>
+        <p class="hero-copy">
+          Warm, versatile voice work for brands, games, audiobooks, and
+          everything in between. Recorded from a broadcast-ready home studio.
+        </p>
+        <a class="button button-green" href="#demos">Listen to the demos</a>
+      </div>
+    </section>
 
-    <div class="intro">
-      <p class="eyebrow">THE VOICE YOU’RE LOOKING FOR</p>
-      <h1>Big characters.<br><span>Good stories.</span></h1>
-      <p class="intro-copy">
-        Warm, bright, and just a little bit weird. I bring characters and
-        commercials to life from my home studio.
-      </p>
-      <a class="button button-orange" href="mailto:hello@example.com">Let’s make noise</a>
+    <section class="quick-facts" aria-label="Studio details">
+      <div class="fact">
+        <strong>Fast turnaround</strong>
+        <span>Most projects delivered in 1–2 days</span>
+      </div>
+      <div class="fact">
+        <strong>Studio-quality audio</strong>
+        <span>Clean, edited, ready-to-use files</span>
+      </div>
+      <div class="fact">
+        <strong>Easy collaboration</strong>
+        <span>Live direction available by request</span>
+      </div>
+    </section>
+
+    <section class="section" id="demos">
+      <div class="section-heading">
+        <h2>Hear the voice</h2>
+        <p>Two starting points for your next project.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel demo-panel">
+          <span class="demo-label">Commercial</span>
+          <h3>Bright &amp; conversational</h3>
+          <p>Friendly, natural reads for products and brands.</p>
+          <audio controls preload="none">
+            <source src="commercial-demo.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </article>
+
+        <article class="panel demo-panel">
+          <span class="demo-label">Narration</span>
+          <h3>Clear &amp; reassuring</h3>
+          <p>Steady storytelling for explainers and documentaries.</p>
+          <audio controls preload="none">
+            <source src="narration-demo.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+        </article>
+      </div>
+    </section>
+
+    <div class="info-columns">
+      <section class="section" id="credits">
+        <div class="section-heading">
+          <h2>Recent credits</h2>
+          <p>A few recent projects.</p>
+        </div>
+
+        <div class="credits-list">
+          <article class="panel credit">
+            <span class="demo-label">Commercial</span>
+            <div>
+              <h3>Project Title</h3>
+              <p>Client or brand · Campaign type · Year</p>
+            </div>
+          </article>
+
+          <article class="panel credit">
+            <span class="demo-label">Narration</span>
+            <div>
+              <h3>Project Title</h3>
+              <p>Client or studio · Project type · Year</p>
+            </div>
+          </article>
+
+          <article class="panel credit">
+            <span class="demo-label">Character</span>
+            <div>
+              <h3>Character Name</h3>
+              <p>Game or production · Role · Year</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <h2>A little about me</h2>
+        </div>
+
+        <div class="about-content">
+          <article class="panel">
+            <h3>Professional, relaxed, and ready to record.</h3>
+            <p>
+              I’m Mara, a voice actor who loves helping people find the right
+              sound for their project. Whether you need something polished and
+              assured or loose and full of personality, I’ll work with you to
+              get the read right.
+            </p>
+            <p>
+              My treated home studio can deliver clean, edited audio in the
+              format you need. Send over a script and a little direction, and
+              we’ll take it from there.
+            </p>
+          </article>
+
+          <blockquote class="quote">
+            “Mara understood the tone right away and made the whole process easy.”
+            <small>— Client name</small>
+          </blockquote>
+        </div>
+      </section>
     </div>
 
-    <main class="columns">
-      <div class="main-column">
-        <section id="demos" class="panel demos">
-          <div class="section-heading">
-            <h2>Listen to the demos</h2>
-            <span class="label label-blue">HIT PLAY!</span>
-          </div>
-
-          <article class="demo-row">
-            <div class="demo-icon demo-icon-pink" aria-hidden="true">01</div>
-            <div class="demo-info">
-              <h3>Commercial</h3>
-              <p>Friendly, confident, and ready for your next big idea.</p>
-              <audio controls preload="none">
-                <source src="audio/commercial-demo.mp3" type="audio/mpeg">
-                Your browser does not support audio playback.
-              </audio>
-            </div>
-          </article>
-
-          <article class="demo-row">
-            <div class="demo-icon demo-icon-yellow" aria-hidden="true">02</div>
-            <div class="demo-info">
-              <h3>Character &amp; animation</h3>
-              <p>Heroes, villains, sidekicks, and tiny talking frogs.</p>
-              <audio controls preload="none">
-                <source src="audio/character-demo.mp3" type="audio/mpeg">
-                Your browser does not support audio playback.
-              </audio>
-            </div>
-          </article>
-
-          <article class="demo-row">
-            <div class="demo-icon demo-icon-green" aria-hidden="true">03</div>
-            <div class="demo-info">
-              <h3>Narration</h3>
-              <p>Clear, engaging reads for explainers and e-learning.</p>
-              <audio controls preload="none">
-                <source src="audio/narration-demo.mp3" type="audio/mpeg">
-                Your browser does not support audio playback.
-              </audio>
-            </div>
-          </article>
-        </section>
-
-        <section id="projects" class="panel projects">
-          <div class="section-heading">
-            <h2>Recent projects</h2>
-            <span class="label label-pink">FRESHLY RECORDED</span>
-          </div>
-
-          <article class="project">
-            <span class="project-dot dot-orange" aria-hidden="true"></span>
-            <div>
-              <h3>Moonbeam Cereal</h3>
-              <p>Commercial · “A little magic in every bowl.”</p>
-            </div>
-            <span class="project-year">2025</span>
-          </article>
-
-          <article class="project">
-            <span class="project-dot dot-blue" aria-hidden="true"></span>
-            <div>
-              <h3>Captain Comet</h3>
-              <p>Animation · Voiced Pip, the curious robot.</p>
-            </div>
-            <span class="project-year">2025</span>
-          </article>
-
-          <article class="project">
-            <span class="project-dot dot-green" aria-hidden="true"></span>
-            <div>
-              <h3>Field Notes: The Forest</h3>
-              <p>Documentary · Nature narration.</p>
-            </div>
-            <span class="project-year">2024</span>
-          </article>
-        </section>
+    <section class="section" id="contact">
+      <div class="contact">
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>Tell me what you’re making, and I’ll get back to you soon.</p>
+        </div>
+        <a class="button button-green" href="mailto:hello@maravalevoice.com">
+          Email Mara
+        </a>
       </div>
+    </section>
 
-      <aside id="about" class="sidebar">
-        <section class="panel about-card">
-          <div class="avatar" aria-hidden="true">YN</div>
-          <h2>Hi, I’m Your Name.</h2>
-          <p>
-            I’m a voice actor who loves bold characters, thoughtful storytelling,
-            and making even the smallest line count.
-          </p>
-          <p>
-            Recording from a treated home studio, I deliver clean audio and
-            dependable turnaround.
-          </p>
-          <a class="button button-blue" href="mailto:hello@example.com">Get in touch</a>
-        </section>
+    <footer>
+      © 2026 Mara Vale Voice · Made for good stories and great sound.
 
-        <section class="panel quick-facts">
-          <h2>The quick take</h2>
-          <ul>
-            <li><strong>Voice:</strong> Bright, warm, expressive</li>
-            <li><strong>Studio:</strong> Broadcast-quality home setup</li>
-            <li><strong>Available for:</strong> Remote sessions</li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <p class="footer-title">Tiny buttons, big personality.</p>
-        <p class="footer-note">88 × 31 button spots — swap in your own graphics.</p>
+      <div class="footer-badges">
+        <a class="web-badge" href="#demos">Listen to<br>demos</a>
+        <a class="web-badge" href="#about">About<br>Mara</a>
+        <a class="web-badge" href="mailto:hello@maravalevoice.com">Email<br>Mara</a>
       </div>
-
-      <div class="button-shelf" aria-label="88 by 31 pixel button links">
-        <a class="pixel-button pixel-pink" href="#">VOICE<br>ACTOR</a>
-        <a class="pixel-button pixel-blue" href="#">DEMO<br>REEL</a>
-        <a class="pixel-button pixel-yellow" href="#">HIRE<br>ME!</a>
-        <a class="pixel-button pixel-green" href="#">MADE<br>WITH ♥</a>
-      </div>
-
-      <p class="copyright">© 2025 Your Name · Made with a little extra noise.</p>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
 
