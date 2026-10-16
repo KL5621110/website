@@ -7,111 +7,152 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-frame">
-    <main class="page">
-      <header class="masthead">
-        <p class="eyebrow">Voice actor · Your City</p>
-        <h1>Your Name</h1>
-        <p class="tagline">Warm, bright, and ready to bring your next story to life.</p>
-      </header>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <a class="wordmark" href="#">YOUR NAME<span>!</span></a>
+        <p class="tagline">Voice actor · storyteller · occasional space pirate</p>
+      </div>
 
-      <div class="layout">
-        <div class="left-column">
-          <section class="panel demos" aria-labelledby="demos-title">
-            <h2 id="demos-title">Listen to my demos</h2>
+      <nav aria-label="Main navigation">
+        <a href="#demos">Demos</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </nav>
+    </header>
 
-            <article class="demo">
-              <div>
-                <h3>Commercial</h3>
-                <p>Friendly, conversational, and full of character.</p>
-              </div>
+    <div class="intro">
+      <p class="eyebrow">THE VOICE YOU’RE LOOKING FOR</p>
+      <h1>Big characters.<br><span>Good stories.</span></h1>
+      <p class="intro-copy">
+        Warm, bright, and just a little bit weird. I bring characters and
+        commercials to life from my home studio.
+      </p>
+      <a class="button button-orange" href="mailto:hello@example.com">Let’s make noise</a>
+    </div>
+
+    <main class="columns">
+      <div class="main-column">
+        <section id="demos" class="panel demos">
+          <div class="section-heading">
+            <h2>Listen to the demos</h2>
+            <span class="label label-blue">HIT PLAY!</span>
+          </div>
+
+          <article class="demo-row">
+            <div class="demo-icon demo-icon-pink" aria-hidden="true">01</div>
+            <div class="demo-info">
+              <h3>Commercial</h3>
+              <p>Friendly, confident, and ready for your next big idea.</p>
               <audio controls preload="none">
                 <source src="audio/commercial-demo.mp3" type="audio/mpeg">
                 Your browser does not support audio playback.
               </audio>
-            </article>
+            </div>
+          </article>
 
-            <article class="demo">
-              <div>
-                <h3>Animation</h3>
-                <p>Big personalities, playful voices, and expressive reads.</p>
-              </div>
+          <article class="demo-row">
+            <div class="demo-icon demo-icon-yellow" aria-hidden="true">02</div>
+            <div class="demo-info">
+              <h3>Character &amp; animation</h3>
+              <p>Heroes, villains, sidekicks, and tiny talking frogs.</p>
               <audio controls preload="none">
-                <source src="audio/animation-demo.mp3" type="audio/mpeg">
+                <source src="audio/character-demo.mp3" type="audio/mpeg">
                 Your browser does not support audio playback.
               </audio>
-            </article>
+            </div>
+          </article>
 
-            <article class="demo">
-              <div>
-                <h3>Narration</h3>
-                <p>Clear, engaging delivery for explainers and stories.</p>
-              </div>
+          <article class="demo-row">
+            <div class="demo-icon demo-icon-green" aria-hidden="true">03</div>
+            <div class="demo-info">
+              <h3>Narration</h3>
+              <p>Clear, engaging reads for explainers and e-learning.</p>
               <audio controls preload="none">
                 <source src="audio/narration-demo.mp3" type="audio/mpeg">
                 Your browser does not support audio playback.
               </audio>
-            </article>
-          </section>
+            </div>
+          </article>
+        </section>
 
-          <section class="panel projects" aria-labelledby="projects-title">
-            <h2 id="projects-title">Recent projects</h2>
-            <ul class="project-list">
-              <li>
-                <span class="project-type">ANIMATION</span>
-                <h3><a href="#">The Little Space Parade</a></h3>
-                <p>Voiced Pip, a curious robot with a knack for getting lost.</p>
-              </li>
-              <li>
-                <span class="project-type">COMMERCIAL</span>
-                <h3><a href="#">Sunbeam Cereal</a></h3>
-                <p>A cheerful spot for a very crunchy breakfast.</p>
-              </li>
-              <li>
-                <span class="project-type">NARRATION</span>
-                <h3><a href="#">A Walk Through the Wild</a></h3>
-                <p>Guided visitors through a short nature documentary.</p>
-              </li>
-            </ul>
-          </section>
-        </div>
+        <section id="projects" class="panel projects">
+          <div class="section-heading">
+            <h2>Recent projects</h2>
+            <span class="label label-pink">FRESHLY RECORDED</span>
+          </div>
 
-        <aside class="right-column">
-          <figure class="portrait">
-            <!-- Replace this file with your own headshot. -->
-            <img src="images/headshot.jpg" alt="Portrait of Your Name">
-            <figcaption>Available for remote recording</figcaption>
-          </figure>
+          <article class="project">
+            <span class="project-dot dot-orange" aria-hidden="true"></span>
+            <div>
+              <h3>Moonbeam Cereal</h3>
+              <p>Commercial · “A little magic in every bowl.”</p>
+            </div>
+            <span class="project-year">2025</span>
+          </article>
 
-          <section class="panel about" aria-labelledby="about-title">
-            <h2 id="about-title">A little about me</h2>
-            <p>
-              I’m a voice actor who loves bringing memorable characters and
-              thoughtful stories to life. My sound ranges from bright and
-              energetic to calm and grounded.
-            </p>
-            <p>
-              Working from a home studio and happy to collaborate with
-              producers, creatives, and kind humans everywhere.
-            </p>
-            <a class="contact-link" href="mailto:hello@example.com">
-              Get in touch
-            </a>
-          </section>
-        </aside>
+          <article class="project">
+            <span class="project-dot dot-blue" aria-hidden="true"></span>
+            <div>
+              <h3>Captain Comet</h3>
+              <p>Animation · Voiced Pip, the curious robot.</p>
+            </div>
+            <span class="project-year">2025</span>
+          </article>
+
+          <article class="project">
+            <span class="project-dot dot-green" aria-hidden="true"></span>
+            <div>
+              <h3>Field Notes: The Forest</h3>
+              <p>Documentary · Nature narration.</p>
+            </div>
+            <span class="project-year">2024</span>
+          </article>
+        </section>
       </div>
 
-      <footer class="button-footer">
-        <p>Find me around the web</p>
-        <nav class="badge-row" aria-label="External links">
-          <!-- Replace these sample links with your own. Each badge is 88 × 31. -->
-          <a class="badge badge-blue" href="#" aria-label="Demo reel">DEMO REEL</a>
-          <a class="badge badge-green" href="#" aria-label="Instagram">INSTAGRAM</a>
-          <a class="badge badge-orange" href="#" aria-label="Contact">SAY HELLO!</a>
-          <a class="badge badge-purple" href="#" aria-label="More links">MORE LINKS</a>
-        </nav>
-      </footer>
+      <aside id="about" class="sidebar">
+        <section class="panel about-card">
+          <div class="avatar" aria-hidden="true">YN</div>
+          <h2>Hi, I’m Your Name.</h2>
+          <p>
+            I’m a voice actor who loves bold characters, thoughtful storytelling,
+            and making even the smallest line count.
+          </p>
+          <p>
+            Recording from a treated home studio, I deliver clean audio and
+            dependable turnaround.
+          </p>
+          <a class="button button-blue" href="mailto:hello@example.com">Get in touch</a>
+        </section>
+
+        <section class="panel quick-facts">
+          <h2>The quick take</h2>
+          <ul>
+            <li><strong>Voice:</strong> Bright, warm, expressive</li>
+            <li><strong>Studio:</strong> Broadcast-quality home setup</li>
+            <li><strong>Available for:</strong> Remote sessions</li>
+          </ul>
+        </section>
+      </aside>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-title">Tiny buttons, big personality.</p>
+        <p class="footer-note">88 × 31 button spots — swap in your own graphics.</p>
+      </div>
+
+      <div class="button-shelf" aria-label="88 by 31 pixel button links">
+        <a class="pixel-button pixel-pink" href="#">VOICE<br>ACTOR</a>
+        <a class="pixel-button pixel-blue" href="#">DEMO<br>REEL</a>
+        <a class="pixel-button pixel-yellow" href="#">HIRE<br>ME!</a>
+        <a class="pixel-button pixel-green" href="#">MADE<br>WITH ♥</a>
+      </div>
+
+      <p class="copyright">© 2025 Your Name · Made with a little extra noise.</p>
+    </footer>
   </div>
 </body>
 </html>
