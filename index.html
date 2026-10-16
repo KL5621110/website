@@ -3,78 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Your Name — Voice Actor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="page-header">
-      <h1>Your Name</h1>
-      <p class="tagline">A short description of what you do.</p>
-    </header>
+  <div class="site-frame">
+    <main class="page">
+      <header class="masthead">
+        <p class="eyebrow">Voice actor · Your City</p>
+        <h1>Your Name</h1>
+        <p class="tagline">Warm, bright, and ready to bring your next story to life.</p>
+      </header>
 
-    <main>
-      <section class="voice-demos">
+      <div class="layout">
+        <div class="left-column">
+          <section class="panel demos" aria-labelledby="demos-title">
+            <h2 id="demos-title">Listen to my demos</h2>
 
-        <h3>Commercial</h3>
-        <audio controls preload="none">
-          <source src="audio/commercial-demo.mp3" type="audio/mpeg">
-          Your browser doesn’t support audio playback.
-        </audio>
+            <article class="demo">
+              <div>
+                <h3>Commercial</h3>
+                <p>Friendly, conversational, and full of character.</p>
+              </div>
+              <audio controls preload="none">
+                <source src="audio/commercial-demo.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </article>
 
-        <h3>Character</h3>
-        <audio controls preload="none">
-          <source src="audio/character-demo.mp3" type="audio/mpeg">
-          Your browser doesn’t support audio playback.
-        </audio>
-      </section>
+            <article class="demo">
+              <div>
+                <h3>Animation</h3>
+                <p>Big personalities, playful voices, and expressive reads.</p>
+              </div>
+              <audio controls preload="none">
+                <source src="audio/animation-demo.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </article>
 
-      <section>
-        <h2>About</h2>
-        <p>
-          Hello! I’m a developer, writer, and maker. This is my home on the
-          web, where I share projects, notes, and things I find interesting.
-        </p>
-      </section>
+            <article class="demo">
+              <div>
+                <h3>Narration</h3>
+                <p>Clear, engaging delivery for explainers and stories.</p>
+              </div>
+              <audio controls preload="none">
+                <source src="audio/narration-demo.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </article>
+          </section>
 
-        <section>
-          <h2>Projects</h2>
-          <ul class="link-list">
-            <li><time datetime="2025-04">Apr 2025</time> — <a href="#">Project One</a> — A brief description.</li>
-            <li><time datetime="2024-11">Nov 2024</time> — <a href="#">Project Two</a> — Another short description.</li>
-          </ul>
-        </section>
-
-
-      <section>
-        <h2>Elsewhere</h2>
-        <p>
-          <a href="#">GitHub</a> ·
-          <a href="#">Mastodon</a> ·
-          <a href="mailto:you@example.com">Email</a>
-        </p>
-      </section>
-
-      <section>
-        <h2>Friends &amp; Favorites</h2>
-        <div class="button-rack">
-          <!-- Replace each placeholder with an 88×31 image:
-          <a href="https://example.com">
-            <img src="images/example-button.gif" width="88" height="31"
-                 alt="Example">
-          </a>
-          -->
-          <a class="button-slot" href="#">88 × 31</a>
-          <a class="button-slot" href="#">88 × 31</a>
-          <a class="button-slot" href="#">88 × 31</a>
-          <a class="button-slot" href="#">88 × 31</a>
+          <section class="panel projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Recent projects</h2>
+            <ul class="project-list">
+              <li>
+                <span class="project-type">ANIMATION</span>
+                <h3><a href="#">The Little Space Parade</a></h3>
+                <p>Voiced Pip, a curious robot with a knack for getting lost.</p>
+              </li>
+              <li>
+                <span class="project-type">COMMERCIAL</span>
+                <h3><a href="#">Sunbeam Cereal</a></h3>
+                <p>A cheerful spot for a very crunchy breakfast.</p>
+              </li>
+              <li>
+                <span class="project-type">NARRATION</span>
+                <h3><a href="#">A Walk Through the Wild</a></h3>
+                <p>Guided visitors through a short nature documentary.</p>
+              </li>
+            </ul>
+          </section>
         </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>© Your Name · <a href="#">RSS</a></p>
-    </footer>
+        <aside class="right-column">
+          <figure class="portrait">
+            <!-- Replace this file with your own headshot. -->
+            <img src="images/headshot.jpg" alt="Portrait of Your Name">
+            <figcaption>Available for remote recording</figcaption>
+          </figure>
+
+          <section class="panel about" aria-labelledby="about-title">
+            <h2 id="about-title">A little about me</h2>
+            <p>
+              I’m a voice actor who loves bringing memorable characters and
+              thoughtful stories to life. My sound ranges from bright and
+              energetic to calm and grounded.
+            </p>
+            <p>
+              Working from a home studio and happy to collaborate with
+              producers, creatives, and kind humans everywhere.
+            </p>
+            <a class="contact-link" href="mailto:hello@example.com">
+              Get in touch
+            </a>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="button-footer">
+        <p>Find me around the web</p>
+        <nav class="badge-row" aria-label="External links">
+          <!-- Replace these sample links with your own. Each badge is 88 × 31. -->
+          <a class="badge badge-blue" href="#" aria-label="Demo reel">DEMO REEL</a>
+          <a class="badge badge-green" href="#" aria-label="Instagram">INSTAGRAM</a>
+          <a class="badge badge-orange" href="#" aria-label="Contact">SAY HELLO!</a>
+          <a class="badge badge-purple" href="#" aria-label="More links">MORE LINKS</a>
+        </nav>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
