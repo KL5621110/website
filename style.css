@@ -140,7 +140,7 @@ a:hover {
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: hero-slide 15s linear infinite;
+  animation: hero-slide 5s linear infinite;
 }
 
 .hero-slide:nth-child(2) {
