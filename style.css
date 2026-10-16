@@ -99,7 +99,7 @@ a:hover {
   margin: 24px auto 50px;
 }
 
-/* Hero and color slideshow */
+/* Hero and image slideshow */
 .hero {
   position: relative;
   isolation: isolate;
@@ -140,7 +140,9 @@ a:hover {
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: hero-slide 5s linear infinite;
+  animation: hero-slide 15s linear infinite;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-slide:nth-child(2) {
@@ -152,15 +154,15 @@ a:hover {
 }
 
 .slide-one {
-  background-color: #e76f51;
+  background-image: url('https://via.placeholder.com/1200x400?text=Slide+1');
 }
 
 .slide-two {
-  background-color: #2a9d8f;
+  background-image: url('https://via.placeholder.com/1200x400?text=Slide+2');
 }
 
 .slide-three {
-  background-color: #805ad5;
+  background-image: url('https://via.placeholder.com/1200x400?text=Slide+3');
 }
 
 @keyframes hero-slide {
