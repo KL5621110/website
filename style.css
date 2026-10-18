@@ -102,62 +102,7 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
       
     }
-    /* Desktop: reserve the left for text and the right for photos */
-    .hero {
-      background: #333;
-    }
 
-    .hero-slides {
-      left: 48%;
-    }
-
-    .hero-copy {
-      max-width: 46%;
-    }
-
-    .hero-overlay {
-      background: linear-gradient(
-        90deg,
-        #333 0%,
-        #333 38%,
-        rgba(51, 51, 51, .8) 55%,
-        rgba(51, 51, 51, .12) 100%
-      );
-    }
-
-    /* Adjust each photo's crop if its subject isn't positioned well */
-    .hero-slide:nth-child(1) { object-position: 60% center; }
-    .hero-slide:nth-child(2) { object-position: 70% center; }
-    .hero-slide:nth-child(3) { object-position: 55% center; }
-
-    /* Mobile: put the photos below the text instead */
-    @media (max-width: 680px) {
-      .hero {
-        min-height: 420px;
-        padding: 23px 20px 190px;
-      }
-
-      .hero-copy {
-        max-width: 100%;
-      }
-
-      .hero-slides {
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 165px;
-      }
-
-      .hero-overlay {
-        background: linear-gradient(
-          to bottom,
-          #333 0%,
-          rgba(51, 51, 51, .85) 38%,
-          rgba(51, 51, 51, .1) 100%
-        );
-      }
-    }
     .hero-slides,
     .hero-overlay {
       position: absolute;
